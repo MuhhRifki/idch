@@ -1,15 +1,15 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 	<head>
-		<!-- NAME: 1 COLUMN - BANDED -->
+		<!-- NAME: 2:1:2 COLUMN -->
 		<!--[if gte mso 15]>
-		<xml>
-			<o:OfficeDocumentSettings>
-			<o:AllowPNG/>
-			<o:PixelsPerInch>96</o:PixelsPerInch>
-			</o:OfficeDocumentSettings>
-		</xml>
-		<![endif]-->
+        <xml>
+            <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+        <![endif]-->
 		<meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -79,6 +79,9 @@
 			font-weight:inherit !important;
 			line-height:inherit !important;
 		}
+		#bodyCell{
+			padding:10px;
+		}
 		.templateContainer{
 			max-width:600px !important;
 		}
@@ -103,7 +106,7 @@
 	@tip Set the background color and top border for your email. You may want to choose colors that match your company's branding.
 	*/
 		body,#bodyTable{
-			/*@editable*/background-color:#FAFAFA;
+			/*@editable*/background-color:#ffffff;
 		}
 	/*
 	@tab Page
@@ -112,6 +115,14 @@
 	*/
 		#bodyCell{
 			/*@editable*/border-top:0;
+		}
+	/*
+	@tab Page
+	@section Email Border
+	@tip Set the border for your email.
+	*/
+		.templateContainer{
+			/*@editable*/border:0;
 		}
 	/*
 	@tab Page
@@ -221,7 +232,7 @@
 	@tip Set the background color and borders for your email's header area.
 	*/
 		#templateHeader{
-			/*@editable*/background-color:#ffffff;
+			/*@editable*/background-color:#dddddd;
 			/*@editable*/background-image:none;
 			/*@editable*/background-repeat:no-repeat;
 			/*@editable*/background-position:center;
@@ -254,6 +265,44 @@
 			/*@editable*/text-decoration:underline;
 		}
 	/*
+	@tab Upper Columns
+	@section Upper Column Style
+	@tip Set the background color and borders for your email's upper columns.
+	*/
+		#templateUpperColumns{
+			/*@editable*/background-color:#dddddd;
+			/*@editable*/background-image:none;
+			/*@editable*/background-repeat:no-repeat;
+			/*@editable*/background-position:center;
+			/*@editable*/background-size:cover;
+			/*@editable*/border-top:0;
+			/*@editable*/border-bottom:0;
+			/*@editable*/padding-top:0;
+			/*@editable*/padding-bottom:0;
+		}
+	/*
+	@tab Upper Columns
+	@section Upper Column Text
+	@tip Set the styling for your email's upper column text. Choose a size and color that is easy to read.
+	*/
+		#templateUpperColumns .columnContainer .mcnTextContent,#templateUpperColumns .columnContainer .mcnTextContent p{
+			/*@editable*/color:#202020;
+			/*@editable*/font-family:Helvetica;
+			/*@editable*/font-size:16px;
+			/*@editable*/line-height:150%;
+			/*@editable*/text-align:left;
+		}
+	/*
+	@tab Upper Columns
+	@section Upper Column Link
+	@tip Set the styling for your email's upper column links. Choose a color that helps them stand out from your text.
+	*/
+		#templateUpperColumns .columnContainer .mcnTextContent a,#templateUpperColumns .columnContainer .mcnTextContent p a{
+			/*@editable*/color:#2BAADF;
+			/*@editable*/font-weight:normal;
+			/*@editable*/text-decoration:underline;
+		}
+	/*
 	@tab Body
 	@section Body Style
 	@tip Set the background color and borders for your email's body area.
@@ -262,12 +311,12 @@
 			/*@editable*/background-color:#ffffff;
 			/*@editable*/background-image:none;
 			/*@editable*/background-repeat:no-repeat;
-			/*@editable*/background-position:top;
-			/*@editable*/background-size:contain;
+			/*@editable*/background-position:center;
+			/*@editable*/background-size:cover;
 			/*@editable*/border-top:0;
 			/*@editable*/border-bottom:0;
-			/*@editable*/padding-top:9px;
-			/*@editable*/padding-bottom:9px;
+			/*@editable*/padding-top:0;
+			/*@editable*/padding-bottom:0;
 		}
 	/*
 	@tab Body
@@ -278,7 +327,7 @@
 			/*@editable*/color:#202020;
 			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:16px;
-			/*@editable*/line-height:125%;
+			/*@editable*/line-height:150%;
 			/*@editable*/text-align:left;
 		}
 	/*
@@ -292,20 +341,58 @@
 			/*@editable*/text-decoration:underline;
 		}
 	/*
+	@tab Lower Columns
+	@section Lower Column Style
+	@tip Set the background color and borders for your email's lower columns.
+	*/
+		#templateLowerColumns{
+			/*@editable*/background-color:#ffffff;
+			/*@editable*/background-image:none;
+			/*@editable*/background-repeat:no-repeat;
+			/*@editable*/background-position:center;
+			/*@editable*/background-size:cover;
+			/*@editable*/border-top:0;
+			/*@editable*/border-bottom:2px solid #EAEAEA;
+			/*@editable*/padding-top:0;
+			/*@editable*/padding-bottom:9px;
+		}
+	/*
+	@tab Lower Columns
+	@section Lower Column Text
+	@tip Set the styling for your email's lower column text. Choose a size and color that is easy to read.
+	*/
+		#templateLowerColumns .columnContainer .mcnTextContent,#templateLowerColumns .columnContainer .mcnTextContent p{
+			/*@editable*/color:#202020;
+			/*@editable*/font-family:Helvetica;
+			/*@editable*/font-size:16px;
+			/*@editable*/line-height:150%;
+			/*@editable*/text-align:left;
+		}
+	/*
+	@tab Lower Columns
+	@section Lower Column Link
+	@tip Set the styling for your email's lower column links. Choose a color that helps them stand out from your text.
+	*/
+		#templateLowerColumns .columnContainer .mcnTextContent a,#templateLowerColumns .columnContainer .mcnTextContent p a{
+			/*@editable*/color:#2BAADF;
+			/*@editable*/font-weight:normal;
+			/*@editable*/text-decoration:underline;
+		}
+	/*
 	@tab Footer
 	@section Footer Style
 	@tip Set the background color and borders for your email's footer area.
 	*/
 		#templateFooter{
-			/*@editable*/background-color:#ffffff;
-			/*@editable*/background-image:url("https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/3b5d44fa-f20c-4bbe-94d3-14e14af739a4.jpg");
-			/*@editable*/background-repeat:no-repeat;
-			/*@editable*/background-position:top;
-			/*@editable*/background-size:auto;
+			/*@editable*/background-color:#0f1c2f;
+			/*@editable*/background-image:none;
+			/*@editable*/background-repeat:repeat-x;
+			/*@editable*/background-position:center;
+			/*@editable*/background-size:contain;
 			/*@editable*/border-top:0;
 			/*@editable*/border-bottom:0;
-			/*@editable*/padding-top:9px;
-			/*@editable*/padding-bottom:9px;
+			/*@editable*/padding-top:0px;
+			/*@editable*/padding-bottom:0px;
 		}
 	/*
 	@tab Footer
@@ -348,6 +435,12 @@
 }	@media only screen and (max-width: 480px){
 		#bodyCell{
 			padding-top:10px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.columnWrapper{
+			max-width:100% !important;
+			width:100% !important;
 		}
 
 }	@media only screen and (max-width: 480px){
@@ -507,10 +600,32 @@
 }	@media only screen and (max-width: 480px){
 	/*
 	@tab Mobile Styles
+	@section Upper Column Text
+	@tip Make the upper column text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+	*/
+		#templateUpperColumns .columnContainer .mcnTextContent,#templateUpperColumns .columnContainer .mcnTextContent p{
+			/*@editable*/font-size:16px !important;
+			/*@editable*/line-height:150% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+	/*
+	@tab Mobile Styles
 	@section Body Text
 	@tip Make the body text larger in size for better readability on small screens. We recommend a font size of at least 16px.
 	*/
 		#templateBody .mcnTextContent,#templateBody .mcnTextContent p{
+			/*@editable*/font-size:16px !important;
+			/*@editable*/line-height:150% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+	/*
+	@tab Mobile Styles
+	@section Lower Column Text
+	@tip Make the lower column text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+	*/
+		#templateLowerColumns .columnContainer .mcnTextContent,#templateLowerColumns .columnContainer .mcnTextContent p{
 			/*@editable*/font-size:16px !important;
 			/*@editable*/line-height:150% !important;
 		}
@@ -532,18 +647,63 @@
             <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
                 <tr>
                     <td align="center" valign="top" id="bodyCell">
-                        <!-- BEGIN TEMPLATE // -->
-                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                            <tr>
-								<td align="center" valign="top" id="templatePreheader">
-									<!--[if gte mso 9]>
-									<table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
-									<tr>
-									<td align="center" valign="top" width="600" style="width:600px;">
-									<![endif]-->
-									<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">
-										<tr>
-                                			<td valign="top" class="preheaderContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+						<!-- BEGIN TEMPLATE // -->
+						<!--[if gte mso 9]>
+						<table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
+						<tr>
+						<td align="center" valign="top" width="600" style="width:600px;">
+						<![endif]-->
+						<table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">
+							<tr>
+								<td valign="top" id="templatePreheader"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+    <tbody class="mcnTextBlockOuter">
+        <tr>
+            <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
+              	<!--[if mso]>
+				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+				<tr>
+				<![endif]-->
+			    
+				<!--[if mso]>
+				<td valign="top" width="390" style="width:390px;">
+				<![endif]-->
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:390px;" width="100%" class="mcnTextContentContainer">
+                    <tbody><tr>
+                        
+                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-left:18px; padding-bottom:9px; padding-right:18px;">
+                        
+                            Use this area to offer a short preview of your email's content.
+                        </td>
+                    </tr>
+                </tbody></table>
+				<!--[if mso]>
+				</td>
+				<![endif]-->
+                
+				<!--[if mso]>
+				<td valign="top" width="210" style="width:210px;">
+				<![endif]-->
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:210px;" width="100%" class="mcnTextContentContainer">
+                    <tbody><tr>
+                        
+                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-left:18px; padding-bottom:9px; padding-right:18px;">
+                        
+                            <a href="*|ARCHIVE|*" target="_blank">View this email in your browser</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+				<!--[if mso]>
+				</td>
+				<![endif]-->
+                
+				<!--[if mso]>
+				</tr>
+				</table>
+				<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
     <tbody class="mcnImageBlockOuter">
             <tr>
                 <td valign="top" style="padding:0px" class="mcnImageBlockInner">
@@ -561,26 +721,7 @@
                 </td>
             </tr>
     </tbody>
-</table></td>
-										</tr>
-									</table>
-									<!--[if gte mso 9]>
-									</td>
-									</tr>
-									</table>
-									<![endif]-->
-								</td>
-                            </tr>
-							<tr>
-								<td align="center" valign="top" id="templateHeader">
-									<!--[if gte mso 9]>
-									<table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
-									<tr>
-									<td align="center" valign="top" width="600" style="width:600px;">
-									<![endif]-->
-									<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">
-										<tr>
-                                			<td valign="top" class="headerContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
@@ -597,9 +738,13 @@
                         
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
                         
-                            <div style="text-align: center;"><span style="font-size:24px"><span style="color:#333333"><strong>Lorem Ipsum</strong></span></span><br>
-<span style="font-size:24px"><span style="color:#333333"><strong><img align="none" height="5" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/d21670cb-7427-4086-96af-d29596d18395.jpg" style="width: 56px; height: 5px; margin: 0px;" width="56"></strong></span></span><br>
-<span style="font-size:15px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</span></div>
+                            <div style="text-align: center;"><br>
+<span style="font-size:24px"><strong>Lorem Ipsum</strong></span><br>
+<strong><img align="none" height="5" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/d21670cb-7427-4086-96af-d29596d18395.jpg" width="56"></strong><br>
+<span style="font-size:12px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>
+empor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br>
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</span><br>
+&nbsp;</div>
 
                         </td>
                     </tr>
@@ -615,26 +760,7 @@
             </td>
         </tr>
     </tbody>
-</table></td>
-										</tr>
-									</table>
-									<!--[if gte mso 9]>
-									</td>
-									</tr>
-									</table>
-									<![endif]-->
-								</td>
-                            </tr>
-							<tr>
-								<td align="center" valign="top" id="templateBody">
-									<!--[if gte mso 9]>
-									<table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
-									<tr>
-									<td align="center" valign="top" width="600" style="width:600px;">
-									<![endif]-->
-									<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">
-										<tr>
-                                			<td valign="top" class="bodyContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnCaptionBlock">
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnCaptionBlock">
     <tbody class="mcnCaptionBlockOuter">
         <tr>
             <td class="mcnCaptionBlockInner" valign="top" style="padding:9px;">
@@ -661,14 +787,13 @@
             <table class="mcnCaptionRightTextContentContainer" align="right" border="0" cellpadding="0" cellspacing="0" width="352">
                 <tbody><tr>
                     <td valign="top" class="mcnTextContent">
-                        <div dir="ltr" style="text-align: left;"><br>
-<span style="font-size:27px"><span style="color:#3399ff"><strong>Lorem Ipsum</strong></span></span><br>
-&nbsp;</div>
-
-<div style="text-align: left;"><span style="font-size:12px">Lorem ipsum dolor sit amet, consectetur adipisicing<br>
-elit, sed do eiusmod tempor incididunt ut labore et dolore<br>
-<img align="none" height="37" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/9dcc84ce-7fec-4eeb-9eff-7efa081d05e0.png" style="width: 180px; height: 37px; margin: 5px 0px 0px;" width="180"></span></div>
-
+                        <br>
+<br>
+<span style="font-size:24px"><strong><span style="color:#3399ff">Lorem Ipsum</span></strong></span><br>
+<span style="font-size:12px">Lorem ipsum dolor sit amet, consectetur adipisicing<br>
+elit, sed do eiusmod tempor incididunt ut labore et dolore</span><br>
+<br>
+<img align="none" data-pin-nopin="true" height="37" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/9dcc84ce-7fec-4eeb-9eff-7efa081d05e0.png" width="180">
                     </td>
                 </tr>
             </tbody></table>
@@ -682,7 +807,10 @@ elit, sed do eiusmod tempor incididunt ut labore et dolore<br>
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+</table></td>
+							</tr>
+							<tr>
+								<td valign="top" id="templateHeader"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
@@ -702,10 +830,9 @@ elit, sed do eiusmod tempor incididunt ut labore et dolore<br>
                             <h2 style="text-align: center;"><br>
 <strong>Mengapa IDCloudHost?</strong></h2>
 
-<div style="text-align: center;"><span style="font-size:24px"><span style="color:#333333"><strong><img align="none" height="5" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/d21670cb-7427-4086-96af-d29596d18395.jpg" style="width: 56px; height: 5px; margin: 0px;" width="56"></strong></span></span></div>
+<div style="text-align: center;"><strong><img align="none" height="5" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/d21670cb-7427-4086-96af-d29596d18395.jpg" width="56"></strong></div>
 
-<p style="text-align: center;">Berbagai Alasan untuk Memilih IDCloudHost Sebagai Partner Bisnis Anda<br>
-&nbsp;</p>
+<p style="text-align: center;">Berbagai Alasan untuk Memilih IDCloudHost Sebagai Partner Bisnis Anda</p>
 
                         </td>
                     </tr>
@@ -721,60 +848,41 @@ elit, sed do eiusmod tempor incididunt ut labore et dolore<br>
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageGroupBlock">
+</table></td>
+							</tr>
+							<tr>
+								<td valign="top" id="templateUpperColumns">
+									<!--[if gte mso 9]>
+									<table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
+									<tr>
+									<td align="center" valign="top" width="300" style="width:300px;">
+									<![endif]-->
+									<table align="left" border="0" cellpadding="0" cellspacing="0" width="300" class="columnWrapper">
+										<tr>
+											<td valign="top" class="columnContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageGroupBlock">
     <tbody class="mcnImageGroupBlockOuter">
         
             <tr>
                 <td valign="top" style="padding:9px" class="mcnImageGroupBlockInner">
                     
-                    <table align="left" width="273" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
+                    <table align="left" width="123" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
                             <tbody><tr>
                                 <td class="mcnImageGroupContent" valign="top" style="padding-left: 9px; padding-top: 0; padding-bottom: 0;">
                                 
                                     
-                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/c2b87220-1316-4275-b000-be930b370d69.png" width="200" style="max-width:200px; padding-bottom: 0;" class="mcnImage">
+                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/537537c6-a26a-40cb-ac47-277cd021b871.png" width="114" style="max-width:254px; padding-bottom: 0;" class="mcnImage">
                                     
                                 
                                 </td>
                             </tr>
                         </tbody></table>
                     
-                    <table align="right" width="273" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
+                    <table align="right" width="123" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
                             <tbody><tr>
                                 <td class="mcnImageGroupContent" valign="top" style="padding-right: 9px; padding-top: 0; padding-bottom: 0;">
                                 
                                     
-                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/889840a0-bd95-41ab-b847-23547c069163.png" width="200" style="max-width:200px; padding-bottom: 0;" class="mcnImage">
-                                    
-                                
-                                </td>
-                            </tr>
-                        </tbody></table>
-                    
-                </td>
-            </tr>
-        
-            <tr>
-                <td valign="top" style="padding:9px" class="mcnImageGroupBlockInner">
-                    
-                    <table align="left" width="273" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
-                            <tbody><tr>
-                                <td class="mcnImageGroupContent" valign="top" style="padding-left: 9px; padding-top: 0; padding-bottom: 0;">
-                                
-                                    
-                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/86bd4c15-5623-4261-805b-1da66b75390d.png" width="200" style="max-width:200px; padding-bottom: 0;" class="mcnImage">
-                                    
-                                
-                                </td>
-                            </tr>
-                        </tbody></table>
-                    
-                    <table align="right" width="273" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
-                            <tbody><tr>
-                                <td class="mcnImageGroupContent" valign="top" style="padding-right: 9px; padding-top: 0; padding-bottom: 0;">
-                                
-                                    
-                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/bd543cdd-144d-4b1c-a814-7d27febd5ce7.png" width="200" style="max-width:200px; padding-bottom: 0;" class="mcnImage">
+                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/733180b5-f304-4932-b97d-33af40c82a35.png" width="114" style="max-width:254px; padding-bottom: 0;" class="mcnImage">
                                     
                                 
                                 </td>
@@ -785,7 +893,61 @@ elit, sed do eiusmod tempor incididunt ut labore et dolore<br>
             </tr>
         
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+</table></td>
+										</tr>
+									</table>
+									<!--[if gte mso 9]>
+									</td>
+									<td align="center" valign="top" width="300" style="width:300px;">
+									<![endif]-->
+									<table align="left" border="0" cellpadding="0" cellspacing="0" width="300" class="columnWrapper">
+										<tr>
+											<td valign="top" class="columnContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageGroupBlock">
+    <tbody class="mcnImageGroupBlockOuter">
+        
+            <tr>
+                <td valign="top" style="padding:9px" class="mcnImageGroupBlockInner">
+                    
+                    <table align="left" width="123" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
+                            <tbody><tr>
+                                <td class="mcnImageGroupContent" valign="top" style="padding-left: 9px; padding-top: 0; padding-bottom: 0;">
+                                
+                                    
+                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/67e90d74-1f99-4fea-a642-aff26457d87f.png" width="114" style="max-width:254px; padding-bottom: 0;" class="mcnImage">
+                                    
+                                
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    
+                    <table align="right" width="123" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
+                            <tbody><tr>
+                                <td class="mcnImageGroupContent" valign="top" style="padding-right: 9px; padding-top: 0; padding-bottom: 0;">
+                                
+                                    
+                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/9c372184-9b33-4d7e-8fa7-9e0b7bb5b49b.png" width="114" style="max-width:254px; padding-bottom: 0;" class="mcnImage">
+                                    
+                                
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    
+                </td>
+            </tr>
+        
+    </tbody>
+</table></td>
+										</tr>
+									</table>
+									<!--[if gte mso 9]>
+									</td>
+									</tr>
+									</table>
+									<![endif]-->
+								</td>
+							</tr>
+							<tr>
+								<td valign="top" id="templateBody"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
@@ -805,7 +967,7 @@ elit, sed do eiusmod tempor incididunt ut labore et dolore<br>
                             <h2 style="text-align: center;"><br>
 <strong>Layanan Kami</strong></h2>
 
-<div style="text-align: center;"><span style="font-size:24px"><span style="color:#333333"><strong><img align="none" height="5" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/d21670cb-7427-4086-96af-d29596d18395.jpg" style="width: 56px; height: 5px; margin: 0px;" width="56"></strong></span></span></div>
+<div style="text-align: center;"><strong><img align="none" data-pin-nopin="true" height="5" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/d21670cb-7427-4086-96af-d29596d18395.jpg" width="56"></strong></div>
 
                         </td>
                     </tr>
@@ -821,31 +983,42 @@ elit, sed do eiusmod tempor incididunt ut labore et dolore<br>
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageGroupBlock">
+</table></td>
+							</tr>
+							<tr>
+								<td valign="top" id="templateLowerColumns">
+									<!--[if gte mso 9]>
+									<table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
+									<tr>
+									<td align="center" valign="top" width="300" style="width:300px;">
+									<![endif]-->
+									<table align="left" border="0" cellpadding="0" cellspacing="0" width="300" class="columnWrapper">
+										<tr>
+											<td valign="top" class="columnContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageGroupBlock">
     <tbody class="mcnImageGroupBlockOuter">
         
             <tr>
                 <td valign="top" style="padding:9px" class="mcnImageGroupBlockInner">
                     
-                    <table align="left" width="273" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
+                    <table align="left" width="123" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
                             <tbody><tr>
                                 <td class="mcnImageGroupContent" valign="top" style="padding-left: 9px; padding-top: 0; padding-bottom: 0;">
                                 
-                                    <a href="https://idcloudhost.com/domain-murah-indonesia/" title="" class="" target="_blank">
-                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/a4a478f2-eec3-4cc7-a21c-9f0d6094a1a0.png" width="161" style="max-width:161px; padding-bottom: 0;" class="mcnImage">
-                                    </a>
+                                    
+                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/d2ce9264-c47a-453a-b181-0b776d7de496.png" width="114" style="max-width:225px; padding-bottom: 0;" class="mcnImage">
+                                    
                                 
                                 </td>
                             </tr>
                         </tbody></table>
                     
-                    <table align="right" width="273" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
+                    <table align="right" width="123" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
                             <tbody><tr>
                                 <td class="mcnImageGroupContent" valign="top" style="padding-right: 9px; padding-top: 0; padding-bottom: 0;">
                                 
-                                    <a href="https://idcloudhost.com/hosting-ssd-murah-indonesia/" title="" class="" target="_blank">
-                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/9b6a1715-871d-4406-8d4f-4ebb3bc0b8bc.png" width="180" style="max-width:180px; padding-bottom: 0;" class="mcnImage">
-                                    </a>
+                                    
+                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/06a25283-545f-4493-991f-617f030584fa.png" width="114" style="max-width:225px; padding-bottom: 0;" class="mcnImage">
+                                    
                                 
                                 </td>
                             </tr>
@@ -857,25 +1030,25 @@ elit, sed do eiusmod tempor incididunt ut labore et dolore<br>
             <tr>
                 <td valign="top" style="padding:9px" class="mcnImageGroupBlockInner">
                     
-                    <table align="left" width="273" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
+                    <table align="left" width="123" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
                             <tbody><tr>
                                 <td class="mcnImageGroupContent" valign="top" style="padding-left: 9px; padding-top: 0; padding-bottom: 0;">
                                 
-                                    <a href="https://idcloudhost.com/vps-murah-indonesia/" title="" class="" target="_blank">
-                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/5dac7a6b-6960-449c-969d-06fa2f17dc1f.png" width="180" style="max-width:180px; padding-bottom: 0;" class="mcnImage">
-                                    </a>
+                                    
+                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/3e20b61b-95ef-401a-898e-b549defc66b1.png" width="114" style="max-width:225px; padding-bottom: 0;" class="mcnImage">
+                                    
                                 
                                 </td>
                             </tr>
                         </tbody></table>
                     
-                    <table align="right" width="273" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
+                    <table align="right" width="123" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
                             <tbody><tr>
                                 <td class="mcnImageGroupContent" valign="top" style="padding-right: 9px; padding-top: 0; padding-bottom: 0;">
                                 
-                                    <a href="https://idcloudhost.com/private-web-hosting-indonesia/" title="" class="" target="_blank">
-                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/37f2f912-fad6-4f2c-9474-92ae63ad103f.png" width="180" style="max-width:180px; padding-bottom: 0;" class="mcnImage">
-                                    </a>
+                                    
+                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/72dbe799-2fcb-456f-bc56-f7af828fb299.png" width="114" style="max-width:225px; padding-bottom: 0;" class="mcnImage">
+                                    
                                 
                                 </td>
                             </tr>
@@ -885,31 +1058,40 @@ elit, sed do eiusmod tempor incididunt ut labore et dolore<br>
             </tr>
         
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageGroupBlock">
+</table></td>
+										</tr>
+									</table>
+									<!--[if gte mso 9]>
+									</td>
+									<td align="center" valign="top" width="300" style="width:300px;">
+									<![endif]-->
+									<table align="left" border="0" cellpadding="0" cellspacing="0" width="300" class="columnWrapper">
+										<tr>
+											<td valign="top" class="columnContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageGroupBlock">
     <tbody class="mcnImageGroupBlockOuter">
         
             <tr>
                 <td valign="top" style="padding:9px" class="mcnImageGroupBlockInner">
                     
-                    <table align="left" width="273" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
+                    <table align="left" width="123" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
                             <tbody><tr>
                                 <td class="mcnImageGroupContent" valign="top" style="padding-left: 9px; padding-top: 0; padding-bottom: 0;">
                                 
-                                    <a href="https://idcloudhost.com/colocation-server/" title="" class="" target="_blank">
-                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/ab4a0e4c-b1e9-41e4-96ea-768740db2fdf.png" width="180" style="max-width:180px; padding-bottom: 0;" class="mcnImage">
-                                    </a>
+                                    
+                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/afa9aecd-a88e-4dd5-a82b-d8cbda10ed0a.png" width="114" style="max-width:225px; padding-bottom: 0;" class="mcnImage">
+                                    
                                 
                                 </td>
                             </tr>
                         </tbody></table>
                     
-                    <table align="right" width="273" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
+                    <table align="right" width="123" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
                             <tbody><tr>
                                 <td class="mcnImageGroupContent" valign="top" style="padding-right: 9px; padding-top: 0; padding-bottom: 0;">
                                 
-                                    <a href="https://idcloudhost.com/reseller-domain-murah/" title="" class="" target="_blank">
-                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/4b68c281-3633-4bb7-a8b2-f67174d59664.png" width="180" style="max-width:180px; padding-bottom: 0;" class="mcnImage">
-                                    </a>
+                                    
+                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/ded56b07-9827-4754-9e79-eb8cb5179169.png" width="114" style="max-width:225px; padding-bottom: 0;" class="mcnImage">
+                                    
                                 
                                 </td>
                             </tr>
@@ -921,25 +1103,25 @@ elit, sed do eiusmod tempor incididunt ut labore et dolore<br>
             <tr>
                 <td valign="top" style="padding:9px" class="mcnImageGroupBlockInner">
                     
-                    <table align="left" width="273" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
+                    <table align="left" width="123" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
                             <tbody><tr>
                                 <td class="mcnImageGroupContent" valign="top" style="padding-left: 9px; padding-top: 0; padding-bottom: 0;">
                                 
-                                    <a href="https://idcloudhost.com/reseller-hosting-murah-indonesia/" title="" class="" target="_blank">
-                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/9ed39de9-5b83-4a34-80b9-06e12670773c.png" width="180" style="max-width:180px; padding-bottom: 0;" class="mcnImage">
-                                    </a>
+                                    
+                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/457273db-63db-4734-ad52-0d826f836b04.png" width="114" style="max-width:225px; padding-bottom: 0;" class="mcnImage">
+                                    
                                 
                                 </td>
                             </tr>
                         </tbody></table>
                     
-                    <table align="right" width="273" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
+                    <table align="right" width="123" border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupContentContainer">
                             <tbody><tr>
                                 <td class="mcnImageGroupContent" valign="top" style="padding-right: 9px; padding-top: 0; padding-bottom: 0;">
                                 
-                                    <a href="https://idcloudhost.com/ssl-certificate/" title="" class="" target="_blank">
-                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/cbca92e9-139b-4ed5-92fe-1c34471d8d95.png" width="180" style="max-width:180px; padding-bottom: 0;" class="mcnImage">
-                                    </a>
+                                    
+                                        <img alt="" src="https://gallery.mailchimp.com/caeec66324e879c3ebe5d55bc/images/fb283349-ddf5-4ada-a082-2f7642cb0390.png" width="114" style="max-width:225px; padding-bottom: 0;" class="mcnImage">
+                                    
                                 
                                 </td>
                             </tr>
@@ -949,7 +1131,18 @@ elit, sed do eiusmod tempor incididunt ut labore et dolore<br>
             </tr>
         
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+</table></td>
+										</tr>
+									</table>
+									<!--[if gte mso 9]>
+									</td>
+									</tr>
+									</table>
+									<![endif]-->
+								</td>
+							</tr>
+							<tr>
+								<td valign="top" id="templateFooter"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
     <tbody class="mcnImageBlockOuter">
             <tr>
                 <td valign="top" style="padding:0px" class="mcnImageBlockInner">
@@ -967,44 +1160,7 @@ elit, sed do eiusmod tempor incididunt ut labore et dolore<br>
                 </td>
             </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
-    <tbody class="mcnDividerBlockOuter">
-        <tr>
-            <td class="mcnDividerBlockInner" style="min-width: 100%; padding: 10px 18px 25px;">
-                <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-top: 2px solid #EEEEEE;">
-                    <tbody><tr>
-                        <td>
-                            <span></span>
-                        </td>
-                    </tr>
-                </tbody></table>
-<!--            
-                <td class="mcnDividerBlockInner" style="padding: 18px;">
-                <hr class="mcnDividerContent" style="border-bottom-color:none; border-left-color:none; border-right-color:none; border-bottom-width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; margin-left:0;" />
--->
-            </td>
-        </tr>
-    </tbody>
-</table></td>
-										</tr>
-									</table>
-									<!--[if gte mso 9]>
-									</td>
-									</tr>
-									</table>
-									<![endif]-->
-								</td>
-                            </tr>
-                            <tr>
-								<td align="center" valign="top" id="templateFooter">
-									<!--[if gte mso 9]>
-									<table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
-									<tr>
-									<td align="center" valign="top" width="600" style="width:600px;">
-									<![endif]-->
-									<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">
-										<tr>
-                                			<td valign="top" class="footerContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
@@ -1014,16 +1170,24 @@ elit, sed do eiusmod tempor incididunt ut labore et dolore<br>
 				<![endif]-->
 			    
 				<!--[if mso]>
-				<td valign="top" width="390" style="width:390px;">
+				<td valign="top" width="300" style="width:300px;">
 				<![endif]-->
-                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:390px;" width="100%" class="mcnTextContentContainer">
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:300px;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         
                         <td valign="top" class="mcnTextContent" style="padding: 0px 18px 9px; line-height: 100%;">
                         
-                            <div style="text-align: left;"><span style="color:#FFFFFF"><span style="font-size:10px"><strong>ABOUT</strong><br>
+                            <div style="text-align: left;"><span style="color:#FFFFFF"><span style="font-size:12px"><strong>ABOUT</strong></span><br>
 <br>
-IDCloudHost (PT Cloud Hosting Indonesia) is the first SSD Cloud Hosting service in Indonesia with a variety of cloud computing technologies that are designed for customer needs and also to build an abstraction of complex infrastructure in a service.</span></span></div>
+<span style="font-size:10px">IDCloudHost (PT Cloud Hosting Indonesia) is the first SSD Cloud Hosting service in Indonesia with a variety of cloud computing technologies that are designed for customer needs and also to build an abstraction of complex infrastructure in a service</span></span></div>
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td style="text-align: left;" valign="top"><span style="color:#FFFFFF">.</span></td>
+		</tr>
+	</tbody>
+</table>
 
                         </td>
                     </tr>
@@ -1033,14 +1197,20 @@ IDCloudHost (PT Cloud Hosting Indonesia) is the first SSD Cloud Hosting service 
 				<![endif]-->
                 
 				<!--[if mso]>
-				<td valign="top" width="210" style="width:210px;">
+				<td valign="top" width="300" style="width:300px;">
 				<![endif]-->
-                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:210px;" width="100%" class="mcnTextContentContainer">
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:300px;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         
                         <td valign="top" class="mcnTextContent" style="padding: 0px 18px 9px; line-height: 100%;">
                         
-                            
+                            <br>
+<br>
+<br>
+<br>
+&nbsp;
+<div dir="ltr">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.facebook.com/Idcloudhostcom" style="text-decoration: none; color: #3b3b3b; padding: 0px 8px 0 30px; line-height: 0;" target="_blank"><img alt="Facebook" border="0" src="https://raw.githubusercontent.com/MuhhRifki/idch/master/facebook-logo.png"></a> <a href="https://twitter.com/Idcloudhostcom" style="text-decoration: none; color: #3b3b3b; padding: 0px 8px; line-height: 0;" target="_blank"><img alt="" border="0" src="https://raw.githubusercontent.com/MuhhRifki/idch/master/twitter-social-network-logo.png"></a> <a href="https://www.linkedin.com/company/idcloudhost" style="text-decoration: none; color: #3b3b3b; padding: 0px 8px; line-height: 0;" target="_blank"><img alt="" border="0" src="https://raw.githubusercontent.com/MuhhRifki/idch/master/linked-in-logo.png"></a> <a href="https://plus.google.com/102706659748596012074" style="text-decoration: none; color: #3b3b3b; padding: 0px 8px; line-height: 0;" target="_blank"><img alt="" border="0" src="https://raw.githubusercontent.com/MuhhRifki/idch/master/google-plus-logo.png"></a></div>
+
                         </td>
                     </tr>
                 </tbody></table>
@@ -1055,181 +1225,15 @@ IDCloudHost (PT Cloud Hosting Indonesia) is the first SSD Cloud Hosting service 
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowBlock" style="min-width:100%;">
-    <tbody class="mcnFollowBlockOuter">
-        <tr>
-            <td align="center" valign="top" style="padding:9px" class="mcnFollowBlockInner">
-                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowContentContainer" style="min-width:100%;">
-    <tbody><tr>
-        <td align="right" style="padding-left:9px;padding-right:9px;">
-            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;" class="mcnFollowContent">
-                <tbody><tr>
-                    <td align="right" valign="top" style="padding-top:9px; padding-right:9px; padding-left:9px;">
-                        <table align="right" border="0" cellpadding="0" cellspacing="0">
-                            <tbody><tr>
-                                <td align="right" valign="top">
-                                    <!--[if mso]>
-                                    <table align="right" border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                    <![endif]-->
-                                    
-                                        <!--[if mso]>
-                                        <td align="center" valign="top">
-                                        <![endif]-->
-                                        
-                                        
-                                            <table align="left" border="0" cellpadding="0" cellspacing="0" style="display:inline;">
-                                                <tbody><tr>
-                                                    <td valign="top" style="padding-right:10px; padding-bottom:9px;" class="mcnFollowContentItemContainer">
-                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowContentItem">
-                                                            <tbody><tr>
-                                                                <td align="left" valign="middle" style="padding-top:5px; padding-right:10px; padding-bottom:5px; padding-left:9px;">
-                                                                    <table align="left" border="0" cellpadding="0" cellspacing="0" width="">
-                                                                        <tbody><tr>
-                                                                            
-                                                                                <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                    <a href="https://www.facebook.com/Idcloudhostcom" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/outline-light-facebook-48.png" style="display:block;" height="24" width="24" class=""></a>
-                                                                                </td>
-                                                                            
-                                                                            
-                                                                        </tr>
-                                                                    </tbody></table>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody></table>
-                                                    </td>
-                                                </tr>
-                                            </tbody></table>
-                                        
-                                        <!--[if mso]>
-                                        </td>
-                                        <![endif]-->
-                                    
-                                        <!--[if mso]>
-                                        <td align="center" valign="top">
-                                        <![endif]-->
-                                        
-                                        
-                                            <table align="left" border="0" cellpadding="0" cellspacing="0" style="display:inline;">
-                                                <tbody><tr>
-                                                    <td valign="top" style="padding-right:10px; padding-bottom:9px;" class="mcnFollowContentItemContainer">
-                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowContentItem">
-                                                            <tbody><tr>
-                                                                <td align="left" valign="middle" style="padding-top:5px; padding-right:10px; padding-bottom:5px; padding-left:9px;">
-                                                                    <table align="left" border="0" cellpadding="0" cellspacing="0" width="">
-                                                                        <tbody><tr>
-                                                                            
-                                                                                <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                    <a href="https://twitter.com/Idcloudhostcom" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/outline-light-twitter-48.png" style="display:block;" height="24" width="24" class=""></a>
-                                                                                </td>
-                                                                            
-                                                                            
-                                                                        </tr>
-                                                                    </tbody></table>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody></table>
-                                                    </td>
-                                                </tr>
-                                            </tbody></table>
-                                        
-                                        <!--[if mso]>
-                                        </td>
-                                        <![endif]-->
-                                    
-                                        <!--[if mso]>
-                                        <td align="center" valign="top">
-                                        <![endif]-->
-                                        
-                                        
-                                            <table align="left" border="0" cellpadding="0" cellspacing="0" style="display:inline;">
-                                                <tbody><tr>
-                                                    <td valign="top" style="padding-right:10px; padding-bottom:9px;" class="mcnFollowContentItemContainer">
-                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowContentItem">
-                                                            <tbody><tr>
-                                                                <td align="left" valign="middle" style="padding-top:5px; padding-right:10px; padding-bottom:5px; padding-left:9px;">
-                                                                    <table align="left" border="0" cellpadding="0" cellspacing="0" width="">
-                                                                        <tbody><tr>
-                                                                            
-                                                                                <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                    <a href="https://www.linkedin.com/company/idcloudhost" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/outline-light-linkedin-48.png" style="display:block;" height="24" width="24" class=""></a>
-                                                                                </td>
-                                                                            
-                                                                            
-                                                                        </tr>
-                                                                    </tbody></table>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody></table>
-                                                    </td>
-                                                </tr>
-                                            </tbody></table>
-                                        
-                                        <!--[if mso]>
-                                        </td>
-                                        <![endif]-->
-                                    
-                                        <!--[if mso]>
-                                        <td align="center" valign="top">
-                                        <![endif]-->
-                                        
-                                        
-                                            <table align="left" border="0" cellpadding="0" cellspacing="0" style="display:inline;">
-                                                <tbody><tr>
-                                                    <td valign="top" style="padding-right:0; padding-bottom:9px;" class="mcnFollowContentItemContainer">
-                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowContentItem">
-                                                            <tbody><tr>
-                                                                <td align="left" valign="middle" style="padding-top:5px; padding-right:10px; padding-bottom:5px; padding-left:9px;">
-                                                                    <table align="left" border="0" cellpadding="0" cellspacing="0" width="">
-                                                                        <tbody><tr>
-                                                                            
-                                                                                <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                    <a href="https://plus.google.com/102706659748596012074" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/outline-light-googleplus-48.png" style="display:block;" height="24" width="24" class=""></a>
-                                                                                </td>
-                                                                            
-                                                                            
-                                                                        </tr>
-                                                                    </tbody></table>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody></table>
-                                                    </td>
-                                                </tr>
-                                            </tbody></table>
-                                        
-                                        <!--[if mso]>
-                                        </td>
-                                        <![endif]-->
-                                    
-                                    <!--[if mso]>
-                                    </tr>
-                                    </table>
-                                    <![endif]-->
-                                </td>
-                            </tr>
-                        </tbody></table>
-                    </td>
-                </tr>
-            </tbody></table>
-        </td>
-    </tr>
-</tbody></table>
-
-            </td>
-        </tr>
-    </tbody>
 </table></td>
-										</tr>
-									</table>
-									<!--[if gte mso 9]>
-									</td>
-									</tr>
-									</table>
-									<![endif]-->
-								</td>
-                            </tr>
-                        </table>
-                        <!-- // END TEMPLATE -->
+							</tr>
+						</table>
+						<!--[if gte mso 9]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+						<!-- // END TEMPLATE -->
                     </td>
                 </tr>
             </table>
